@@ -5,8 +5,10 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
-    path('', include('store.urls', namespace = 'store')) 
+    path('', include('store.urls', namespace = 'store')),
     # root directory of the homepage
+    path('basket/', include('basket.urls', namespace='basket')),
+    path('account/', include('account.urls', namespace='account')),
 ]
 
 if settings.DEBUG:
